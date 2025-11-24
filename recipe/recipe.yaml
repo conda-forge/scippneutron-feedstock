@@ -1,6 +1,6 @@
 context:
   name: scippneutron
-  version: 25.7.0
+  version: "25.11.0"
   python_min: "3.10"
 
 package:
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scippneutron-${{ version }}.tar.gz
-  sha256: 87e5880ea0753f26cc64ed2a3f7cd14f335db3856c20d71330e66888717dad15
+  sha256: 537ba3e685d0d70c65ac444aba4dc472eb145f6b8e27f4f8f1f7cef88fb73f8a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -23,7 +23,7 @@ requirements:
     - setuptools-scm >=8.0
     - pip
   run:
-    - python >=${{ python_min }} 
+    - python >=${{ python_min }}
     - python-dateutil
     - email-validator >=2
     - h5py
