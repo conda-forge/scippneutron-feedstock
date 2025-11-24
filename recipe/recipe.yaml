@@ -1,7 +1,7 @@
-context:
+    context:
   name: scippneutron
   version: "25.11.0"
-  python_min: "3.10"
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -24,11 +24,11 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - python-dateutil
+    - python-dateutil >=2.8
     - email-validator >=2
-    - h5py
-    - lazy_loader
-    - mpltoolbox
+    - h5py >=3.12
+    - lazy_loader >=0.4
+    - mpltoolbox >=24.6.0
     - numpy >=1.20
     - plopp >=24.09.1
     - pydantic >=2
