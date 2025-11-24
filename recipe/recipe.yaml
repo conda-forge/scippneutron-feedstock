@@ -1,4 +1,4 @@
-    context:
+context:
   name: scippneutron
   version: "25.11.0"
   python_min: "3.11"
