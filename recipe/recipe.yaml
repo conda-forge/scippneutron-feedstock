@@ -1,6 +1,6 @@
 context:
   name: scippneutron
-  version: "26.4.1"
+  version: "26.5.0"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scippneutron-${{ version }}.tar.gz
-  sha256: 16752430c28172471dcab3f5496af7165ef0673198151f7415fdf585e2d5f0b9
+  sha256: 704023af397e91cf649c31f8022184d96692822e734fa4f0f1900b4bde7c1b91
 
 build:
   number: 0
