@@ -1,7 +1,7 @@
 context:
   name: scippneutron
-  version: "26.7.0"
-  python_min: "3.11"
+  version: "26.9.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scippneutron-${{ version }}.tar.gz
-  sha256: 51f34d293f897fc93e415c700a3a78b6b52b5eb0669ef88b901d56c841f91058
+  sha256: 11ff75c79dcf918170fe0a6a8af8b6348a33e527279cc007003f0b4767b00c81
 
 build:
   number: 0
@@ -24,24 +24,26 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - python-dateutil >=2.8
+    - python-dateutil >=2.9.0
     - email-validator >=2
     - h5py >=3.12
     - lazy_loader >=0.4
     - mpltoolbox >=24.6.0
-    - numpy >=1.20
+    - numpy >=2
     - plopp >=26.5.0
-    - pydantic >=2
+    - pydantic >=2.4
+    - pyyaml >=6.0.1
     - scipp >=25.11.0
-    - scippnexus >=23.11.0
-    - scipy >=1.7.0
+    - scippnexus >=24.6.0
+    - scipy >=1.13.0
 
 tests:
   - python:
       imports:
         - scippneutron
-      pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Neutron scattering tools for Data Reduction
